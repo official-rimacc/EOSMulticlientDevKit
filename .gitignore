@@ -1,0 +1,22 @@
+# Build artifacts — the consuming project rebuilds these.
+Binaries/
+Intermediate/
+Saved/
+
+# Epic-owned tools dropped in locally (DevAuthTool, Bootstrapper, Installer).
+# Never committed — Epic's SDK terms don't allow redistributing them.
+# See Dependencies/README.md for what goes here and where to download it.
+Dependencies/*
+!Dependencies/README.md
+
+# IDE / OS
+.vs/
+.idea/
+.vscode/
+*.sln
+*.suo
+*.user
+*.opendb
+*.sdf
+.DS_Store
+Thumbs.db

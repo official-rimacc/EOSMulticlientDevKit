@@ -1,0 +1,35 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "EOS Multiclient Dev Kit",
+	"Description": "In-editor multiplayer testing for Epic Online Services. Spin up multiple real, EOS-networked clients from a single machine, each its own process with its own overlay and login. Includes one-click EOS setup that writes the full recommended config, a 12-check validator for the common EOS pitfalls, multi-client Quick Launch, and a one-button overlay setup for packaged builds.",
+	"Category": "Networking",
+	"CreatedBy": "Ivan \"official-rimacc\" Rimac",
+	"CreatedByURL": "https://github.com/official-rimacc",
+	"DocsURL": "https://github.com/official-rimacc/EOSMulticlientDevKit#readme",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/official-rimacc/EOSMulticlientDevKit/issues",
+	"EngineVersion": "5.7.0",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "EOSMulticlientDevKitEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "OnlineSubsystemEOS",
+			"Enabled": true
+		},
+		{
+			"Name": "SocketSubsystemEOS",
+			"Enabled": true
+		}
+	]
+}
