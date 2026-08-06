@@ -1,0 +1,27 @@
+name: Unity symbol check
+
+# A fresh clone builds with unity enabled and nothing in the working set, so
+# UnrealBuildTool merges every .cpp of a module into one translation unit. Any
+# symbol defined at file scope in two of those files collides and the build
+# fails. Locally this hides, because adaptive unity pulls modified files out of
+# the blob. This job catches it without needing the engine.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  duplicate-file-scope-symbols:
+    name: Duplicate file-scope symbols
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check for duplicate file-scope symbols
+        run: python .github/scripts/check_unity_symbol_collisions.py Source
