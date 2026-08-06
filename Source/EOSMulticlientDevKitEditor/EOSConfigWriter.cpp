@@ -2,19 +2,14 @@
 // EOSMulticlientDevKit — Recommended Config Writer
 
 #include "EOSConfigWriter.h"
+#include "EOSConfigTextUtils.h"
 #include "EOSMulticlientDevKitEditorLog.h"
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
 
 namespace
 {
-	const TCHAR* EOSSettingsSectionHeader = TEXT("[/Script/OnlineSubsystemEOS.EOSSettings]");
 	const TCHAR* GameEngineSectionHeader = TEXT("[/Script/Engine.GameEngine]");
-
-	bool IsCommentLine(const FString& TrimmedLine)
-	{
-		return TrimmedLine.StartsWith(TEXT(";")) || TrimmedLine.StartsWith(TEXT("#"));
-	}
 
 	/** Line-array view of an ini file with comment-aware, section-scoped operations. */
 	struct FIniLines

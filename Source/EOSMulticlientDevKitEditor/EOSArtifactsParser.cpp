@@ -2,19 +2,13 @@
 // EOSMulticlientDevKit — Artifacts Line Parser
 
 #include "EOSArtifactsParser.h"
+#include "EOSConfigTextUtils.h"
 #include "EOSMulticlientDevKitEditorLog.h"
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
 
 namespace
 {
-	const TCHAR* EOSSettingsSectionHeader = TEXT("[/Script/OnlineSubsystemEOS.EOSSettings]");
-
-	bool IsCommentLine(const FString& TrimmedLine)
-	{
-		return TrimmedLine.StartsWith(TEXT(";")) || TrimmedLine.StartsWith(TEXT("#"));
-	}
-
 	/** True if this trimmed, non-comment line is an Artifacts= entry ('+Artifacts=' included). */
 	bool IsArtifactsLine(const FString& TrimmedLine)
 	{

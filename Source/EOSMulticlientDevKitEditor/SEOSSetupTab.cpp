@@ -3,6 +3,7 @@
 
 #include "SEOSSetupTab.h"
 #include "EOSConfigWriter.h"
+#include "EOSConfigTextUtils.h"
 #include "EOSMulticlientDevKitEditorLog.h"
 #include "Widgets/Layout/SScrollBox.h"
 #include "Widgets/Layout/SBorder.h"
@@ -18,8 +19,6 @@
 #include "Misc/ConfigCacheIni.h"
 
 #define LOCTEXT_NAMESPACE "EOSMulticlientDevKitEditor"
-
-static const TCHAR* DevAuthSection = TEXT("EOSMulticlientDevKit.DevAuthTool");
 
 void SEOSSetupTab::Construct(const FArguments& InArgs)
 {

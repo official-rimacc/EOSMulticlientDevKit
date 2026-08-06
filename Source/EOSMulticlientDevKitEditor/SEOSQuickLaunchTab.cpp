@@ -2,6 +2,7 @@
 // EOSMulticlientDevKit — Quick Launch Tab
 
 #include "SEOSQuickLaunchTab.h"
+#include "EOSConfigTextUtils.h"
 #include "EOSMulticlientDevKitEditorLog.h"
 #include "Widgets/Layout/SBorder.h"
 #include "Widgets/Layout/SSeparator.h"
@@ -17,7 +18,6 @@
 
 #define LOCTEXT_NAMESPACE "EOSMulticlientDevKitEditor"
 
-static const TCHAR* DevAuthSection = TEXT("EOSMulticlientDevKit.DevAuthTool");
 static const TCHAR* DefaultDevAuthPort = TEXT("8081");
 
 /** Read credential names from [EOSMulticlientDevKit.DevAuthTool]. */

@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
-	"Version": 1,
-	"VersionName": "1.0.0",
+	"Version": 2,
+	"VersionName": "1.0.1",
 	"FriendlyName": "EOS Multiclient Dev Kit",
 	"Description": "In-editor multiplayer testing for Epic Online Services. Spin up multiple real, EOS-networked clients from a single machine, each its own process with its own overlay and login. Includes one-click EOS setup that writes the full recommended config, a 12-check validator for the common EOS pitfalls, multi-client Quick Launch, and a one-button overlay setup for packaged builds.",
 	"Category": "Networking",
