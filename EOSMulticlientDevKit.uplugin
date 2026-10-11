@@ -10,7 +10,7 @@
 	"DocsURL": "https://github.com/official-rimacc/EOSMulticlientDevKit#readme",
 	"MarketplaceURL": "",
 	"SupportURL": "https://github.com/official-rimacc/EOSMulticlientDevKit/issues",
-	"EngineVersion": "5.7.0",
+	"EngineVersion": "5.8.0",
 	"CanContainContent": false,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
