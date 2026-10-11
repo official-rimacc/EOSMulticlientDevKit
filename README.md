@@ -6,11 +6,11 @@ whole EOS setup, validates it with 12 checks, and preps packaged builds for the 
 button.
 
 [![License](https://img.shields.io/badge/license-free%20commercial%20use%20%C2%B7%20no%20resale-blue)](LICENSE)
-![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.7-black)
+![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.8%20%C2%B7%205.7-black)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 ![Editor only](https://img.shields.io/badge/editor--only-nothing%20ships%20in%20your%20build-informational)
 
-Unreal Engine 5.7 · Windows · editor-only (nothing ships in your packaged build)
+Unreal Engine 5.8 and 5.7 · Windows · editor-only (nothing ships in your packaged build)
 Created by [Ivan "official-rimacc" Rimac](https://github.com/official-rimacc)
 
 ![Quick Launch](Docs/QuickLaunch.jpg)
@@ -19,8 +19,9 @@ Created by [Ivan "official-rimacc" Rimac](https://github.com/official-rimacc)
 
 ## Requirements
 
-- **Unreal Engine 5.7** — a C++ project (a Blueprint-only project works too, but it will need to
-  become a C++ project to compile the plugin).
+- **Unreal Engine 5.8 or 5.7** — a C++ project (a Blueprint-only project works too, but it will need
+  to become a C++ project to compile the plugin). Tested on 5.8.3 and 5.7.4. The plugin declares no
+  `EngineVersion`, so neither version shows a mismatch notice on startup.
 - **An EOS product** in the [Epic Games Developer Portal](https://dev.epicgames.com/portal) with a
   client policy that permits P2P.
 - **The [EOS DevAuthTool](https://dev.epicgames.com/docs/epic-online-services/accounts-and-social/eos-epic-account-services/developer-authentication-tool)**,
@@ -223,7 +224,7 @@ between different accounts) is exactly what Quick Launch is for.
 
 **Guest login is advanced and needs game-side support.** The Quick Launch checkbox passes
 `-EosGuestLogin` to the last client, for projects that implement an anonymous EOS Connect Device ID
-login. Stock UE 5.7 has no Device ID path — nothing in the engine calls `EOS_Connect_CreateDeviceId` —
+login. Stock UE has no Device ID path — nothing in the engine calls `EOS_Connect_CreateDeviceId` —
 so the flag does nothing on its own; implementing it means either extending `OnlineSubsystemEOS`
 with a device-id credential type or calling the EOS SDK's Connect API directly. Note also that a
 device ID is bound to your Windows user, so two guests on one machine would share a ProductUserId —
